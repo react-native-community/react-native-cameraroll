@@ -144,6 +144,7 @@ Returns a Promise with photo identifier objects from the local camera roll of th
   * `Videos`
   * `Photos` // default
 * `mimeTypes` : {Array} : Filter by mimetype (e.g. image/jpeg).
+* `includeExifTimestamp`: {boolean} : Include the exif timestamp for the photo // Android only
 
 Returns a Promise which when resolved will be of the following shape:
 
@@ -159,6 +160,7 @@ Returns a Promise which when resolved will be of the following shape:
       * `isStored`: {boolean}
       * `playableDuration`: {number}
     * `timestamp`: {number}
+    * `exif_timestamp?`: {number} // Android only. Optional because not all images are guaranteed to have an exif timestamp
     * `location`: {object} : An object with the following shape:
       * `latitude`: {number}
       * `longitude`: {number}

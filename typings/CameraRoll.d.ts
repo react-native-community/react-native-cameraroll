@@ -26,6 +26,7 @@ declare namespace CameraRoll {
     groupName?: string;
     assetType?: AssetType;
     mimeTypes?: Array<string>;
+    includeExifTimestamp?: boolean;
   }
 
   interface PhotoIdentifier {
@@ -41,6 +42,7 @@ declare namespace CameraRoll {
         playableDuration: number,
       },
       timestamp: number,
+      exif_timestamp?: number,
       location?: {
         latitude?: number,
         longitude?: number,
